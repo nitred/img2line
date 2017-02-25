@@ -1,6 +1,8 @@
 # About
 This is a python module to fit a line to an image of a line. It returns the x and y coordinates of the line found in the image. It also returns a scikit-learn model that can be used to predict new y coordinates from new x coordinates.
 
+To understand the module better, checkout the Jupyter Notebook in the `notebooks` folder!
+
 # Limitations
 - The module can only detect dark lines in a light background.
 - The first dark pixel from the bottom of every column in the image is taken into consideration.
