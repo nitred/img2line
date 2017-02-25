@@ -38,8 +38,8 @@ python setup.py develop
 # Usage
 ## Get Coordinates
 ```
-import img2lile
-x, y = img2lile.get_line_from_image("/home/user/line.png", plot=True)
+import img2line
+x, y = img2line.get_line_from_image("/home/user/line.png", plot=True)
 ```
 
 ## Fit Line
