@@ -86,7 +86,7 @@ def fit_line_to_image(imgpath, degree=5, plot=False):
                     marker='o',
                     label="training points")
         Y_pred = model.predict(X_test)
-        plt.plot(X_test, Y_pred, color='teal', linewidth=2,
+        plt.plot(X_test, Y_pred, color='orange', linewidth=2,
                  label="degree %d" % degree)
         plt.show()
 
