@@ -47,7 +47,7 @@ def get_line_from_image(imgpath, plot=False):
     return x, y
 
 
-def plot_line_and_model(x, y, model, label):
+def plot_line_and_model(x, y, model, label, show=True, save_filename=None):
     """Plot original line and model prediction."""
     from matplotlib import pyplot as plt
     # to keep the order
@@ -65,7 +65,12 @@ def plot_line_and_model(x, y, model, label):
                 label="training points")
     Y_pred = model.predict(X_test)
     plt.plot(X_test, Y_pred, color='orange', linewidth=2, label=label)
-    plt.show()
+
+    if save_filename:
+        plt.savefig(save_filename)
+
+    if show:
+        plt.show()
 
 
 def fit_line_to_image(imgpath, degree=5, plot=False):
