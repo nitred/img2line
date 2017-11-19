@@ -10,13 +10,12 @@ To understand the module better, checkout the Jupyter Notebook in the `notebooks
 
 # Installation
 ## Prerequisites
-- `python 2.7`
-- `numpy`
-- `scikit-learn`
-- `scikit-image`
-- `matplotlib`
+- Python 3
+- numpy
+- scikit-learn
+- scikit-image
+- matplotlib
 
-`requirements.txt` is not provided because numpy is painful to install using pip.
 
 ## Regular Installation
 ```
@@ -25,31 +24,41 @@ cd img2line
 python setup.py install
 ```
 
-## Development Installation (Anaconda2)
-```
-git clone https://github.com/nitred/img2line.git
-cd img2line
-enable anaconda-2 environment
-conda env create -f environment.yml
-source activate img2line
-python setup.py develop
+## Development Installation (Anaconda3)
+```bash
+$ git clone https://github.com/nitred/img2line.git
+$ cd img2line
+enable anaconda3 environment
+$ conda env create --force -f dev_environment.yml
+$ source activate img2line
+$ python setup.py develop
 ```
 
 # Usage
 ## Get Coordinates
-```
+```python
 import img2line
 x, y = img2line.get_line_from_image("/home/user/line.png", plot=True)
 ```
 
 ## Fit Line
-```
+#### Polynomial Regression
+```python
 import img2line
 x, y, model = img2line.fit_line_to_image("/home/user/line.png", degree=3, plot=True)
 ```
 
-## Using Model To Predict New y-coordinates
+#### Gaussian Process Regression
+```python
+import img2line
+x, y, model = img2line.fit_gpr_to_image("/home/user/line.png", plot=True)
 ```
+
+
+## Using Model To Predict New Y-coordinates
+```python
+# obtain `model` from either `fit_line_to_image` or `fit_gpr_to_image`
+
 x_new = np.arange(100)[:, np.newaxis]
 y_new = model.predict(x_new)
 ```
