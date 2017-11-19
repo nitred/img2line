@@ -9,13 +9,10 @@ To understand the module better, checkout the Jupyter Notebook in the `notebooks
 - `y = model.predict(x)`, requires `x` to be a 2-dimension `numpy.ndarray`. If `x` is 1-dimension, then use `x = x[:, np.newaxis]` to convert it to 2-dimensions.
 
 # Installation
-## Prerequisites
-- Python 3
-- numpy
-- scikit-learn
-- scikit-image
-- matplotlib
-
+## Pip Installation
+```
+pip install git+https://github.com/nitred/img2line.git --upgrade
+```
 
 ## Regular Installation
 ```
