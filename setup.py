@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='img2line',
-    version='0.0.1',
+    version='0.0.2',
     description='Python toolkit to fit a line to an image of a line.',
     long_description='Python toolkit to fit a line to an image of a line.',
     author='Nitish Reddy Koripalli',
