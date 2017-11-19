@@ -1,0 +1,13 @@
+name: img2line
+channels:
+- defaults
+dependencies:
+- python==3.6
+- numpy
+- scikit-learn
+- scikit-image
+- matplotlib
+- pip:
+  - future
+  - six
+  - jupyter
